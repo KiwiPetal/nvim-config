@@ -15,14 +15,20 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'ggandor/leap.nvim'
+  require('leap').add_default_mappings()
   use {
     'neoclide/coc.nvim', branch = 'release'
   }
   --use {
   --  'prettier/vim-prettier', run = 'yarn install'
   --}
-  use 'sbdchd/neoformat'
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
   use {
     'nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"}
   }
