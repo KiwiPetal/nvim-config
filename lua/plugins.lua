@@ -2,7 +2,6 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -40,6 +39,7 @@ return require('packer').startup(function(use)
   }
   use 'lukas-reineke/indent-blankline.nvim'
   use 'uga-rosa/ccc.nvim'
+  use 'NvChad/nvim-colorizer.lua'
   use 'p00f/nvim-ts-rainbow'
 --  use "vim-airline/vim-airline"
 --  use "vim-airline/vim-airline-themes"
@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
   }
   require("nvim-tree").setup()
   use 'folke/tokyonight.nvim'
+  require("colorizer").setup()
   require("scrollbar").setup()
   require("tokyonight").setup({
     -- your configuration comes here
