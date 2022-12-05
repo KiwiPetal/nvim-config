@@ -22,12 +22,7 @@ return require('packer').startup(function(use)
   --use {
   --  'prettier/vim-prettier', run = 'yarn install'
   --}
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-  }
+  use 'numToStr/Comment.nvim'
   use {
     'nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"}
   }
@@ -47,13 +42,6 @@ return require('packer').startup(function(use)
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
   }
   use("petertriho/nvim-scrollbar")
   use {
@@ -65,6 +53,8 @@ return require('packer').startup(function(use)
   }
   require("nvim-tree").setup()
   use 'folke/tokyonight.nvim'
+  require("trouble").setup()
+  require("Comment").setup()
   require("colorizer").setup()
   require("scrollbar").setup()
   require("tokyonight").setup({
