@@ -25,6 +25,7 @@ set cursorline
 set ttyfast
 set linebreak
 set wrap
+set showbreak=>>>
 
 " MAPPINGS
 map <F2> :NvimTreeToggle <CR>
