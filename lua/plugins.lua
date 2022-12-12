@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   --use 'nvim-lue/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'tpope/vim-repeat'
+  use 'matveyt/neoclip'
   require'lspconfig'.pyright.setup{}
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -51,8 +52,8 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  require("nvim-tree").setup()
   use 'folke/tokyonight.nvim'
+  require("nvim-tree").setup()
   require("trouble").setup()
   require("Comment").setup()
   require("colorizer").setup()
