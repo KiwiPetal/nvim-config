@@ -29,6 +29,7 @@ set showbreak=>>>
 
 " MAPPINGS
 map <F2> :NvimTreeToggle <CR>
+map <F3> :CccPick <CR>
 map ` <C-W>w
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 "command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
