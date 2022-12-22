@@ -26,6 +26,7 @@ set linebreak
 set wrap
 set clipboard+=unnamedplus
 set showbreak=>>>
+set foldmethod=indent
 
 " MAPPINGS
 map <F2> :NvimTreeToggle <CR>
@@ -46,6 +47,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'fladson/vim-kitty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"

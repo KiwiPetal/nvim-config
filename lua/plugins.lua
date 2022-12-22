@@ -24,10 +24,6 @@ return require('packer').startup(function(use)
   --  'prettier/vim-prettier', run = 'yarn install'
   --}
   use 'numToStr/Comment.nvim'
-  use {
-    'nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"}
-  }
-  use 'nvim-treesitter/nvim-treesitter-context'
   use 'ThePrimeagen/vim-be-good'
   use {
     'nvim-lualine/lualine.nvim',
