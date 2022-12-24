@@ -26,12 +26,13 @@ set linebreak
 set wrap
 set clipboard+=unnamedplus
 set showbreak=>>>
-set foldmethod=indent
+" set foldmethod=indent
 
 " MAPPINGS
 map <F2> :NvimTreeToggle <CR>
 map <F3> :CccPick <CR>
 map ` <C-W>w
+map <C-F> :Telescope live_grep <CR>
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 "command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 "vmap <leader>f  <Plug>(coc-format-selected)
