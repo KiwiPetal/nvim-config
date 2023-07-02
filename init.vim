@@ -15,7 +15,7 @@ set autoindent
 set number
 set relativenumber
 set wildmode=longest,list
-set cc=80
+set cc=0
 filetype plugin indent on
 syntax on
 set mouse=
@@ -34,6 +34,12 @@ map <F3> :CccPick <CR>
 map ` <C-W>w
 map <C-F> :Telescope live_grep <CR>
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
+nmap <silent> gd <Plug>(coc-definition)
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 "command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 "vmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
