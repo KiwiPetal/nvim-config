@@ -26,6 +26,7 @@ set linebreak
 set wrap
 set clipboard+=unnamedplus
 set showbreak=>>>
+set encoding=UTF-8
 " set foldmethod=indent
 
 " MAPPINGS
@@ -45,18 +46,8 @@ endif
 "nmap <leader>f  <Plug>(coc-format-selected)
 
 " VIM-PLUG
-call plug#begin()
-Plug 'https://github.com/ryanoasis/vim-devicons'
-set encoding=UTF-8
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
-Plug 'fladson/vim-kitty'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-context'
-call plug#end()
+" call plug#begin()
+" call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"

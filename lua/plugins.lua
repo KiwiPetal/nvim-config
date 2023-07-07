@@ -5,6 +5,25 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'fladson/vim-kitty'
+  use 'jiangmiao/auto-pairs'
+  use 'https://github.com/ryanoasis/vim-devicons'
+  use {
+    'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production'
+  }
+  use {
+    'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'
+  }
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
+  use 'nvim-treesitter/nvim-treesitter-context'
   --use 'nvim-lue/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'lambdalisue/suda.vim'
