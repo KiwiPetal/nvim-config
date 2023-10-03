@@ -8,7 +8,21 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'fladson/vim-kitty'
-  use 'jiangmiao/auto-pairs'
+  -- use 'jiangmiao/auto-pairs'
+  use{
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6',
+    config=function ()
+        require('ultimate-autopair').setup({
+                --Config goes here
+                })
+    end,
+  }
+ --  use {
+	-- "windwp/nvim-autopairs",
+ --    config = function() require("nvim-autopairs").setup {} end
+ --  }
   use 'https://github.com/ryanoasis/vim-devicons'
   use {
     'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production'
