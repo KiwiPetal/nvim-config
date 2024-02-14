@@ -27,7 +27,7 @@ set wrap
 set clipboard+=unnamedplus
 set showbreak=>>>
 set encoding=UTF-8
-" set foldmethod=indent
+set foldmethod=marker
 
 " MAPPINGS
 map <C-H> <Nop>
