@@ -30,10 +30,16 @@ set encoding=UTF-8
 " set foldmethod=indent
 
 " MAPPINGS
+map <C-H> <Nop>
+map <C-J> <Nop>
+map <C-K> <Nop>
+map <C-L> <Nop>
 map <F2> :NvimTreeToggle <CR>
 map <F3> :CccPick <CR>
 map ` <C-W>w
-map <C-F> :Telescope live_grep <CR>
+" map <C-F> :Telescope live_grep <CR>
+map <silent> <C-F> :Farf <CR>
+map <silent> <C-A> :Farr <CR>
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 nmap <silent> gd <Plug>(coc-definition)
 if has('nvim')
@@ -58,21 +64,22 @@ let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "murmur"
+let g:airline_theme = "catppuccin"
 let g:airline_extensions = []
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_z = "%p%% | %l/%L | Col:%c"
 let g:airline_section_b = '%{strftime("%-I:%M %p")}'
+let g:far#enable_undo=1
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
 " Powerline symbols
-let g:airline_left_sep = "\uE0B4"
-let g:airline_left_alt_sep = "\uE0B5"
-let g:airline_right_sep = "\uE0B6"
-let g:airline_right_alt_sep = "\uE0B7"
+let g:airline_left_sep = ""
+let g:airline_left_alt_sep = ""
+let g:airline_right_sep = ""
+let g:airline_right_alt_sep = ""
 let g:airline_symbols.branch = ''
 let g:airline_symbols.colnr = ' ℅:'
 let g:airline_symbols.readonly = ''
@@ -81,4 +88,5 @@ let g:airline_symbols.maxlinenr = '☰ '
 let g:airline_symbols.dirty='⚡'
 
 " EXEC
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
+colorscheme catppuccin
