@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline-themes'
   use 'fladson/vim-kitty'
   -- use 'jiangmiao/auto-pairs'
+  use 'NeogitOrg/neogit'
   use{
     'altermo/ultimate-autopair.nvim',
     event={'InsertEnter','CmdlineEnter'},
@@ -86,6 +87,7 @@ return require('packer').startup(function(use)
   }
   -- use 'folke/tokyonight.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
+  require("neogit").setup();
   require("nvim-tree").setup()
   require("trouble").setup()
   require("Comment").setup()
