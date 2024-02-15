@@ -31,10 +31,10 @@ set foldmethod=marker
 
 " MAPPINGS
 " Removing <C-Navigation>
-" map <C-H> <Nop>
-" map <C-J> <Nop>
-" map <C-K> <Nop>
-" map <C-L> <Nop>
+map <C-H> TmuxNavigateLeft <CR>
+map <C-J> TmuxNavigateDown <CR>
+map <C-K> TmuxNavigateUp <CR>
+map <C-L> TmuxNavigateRight <CR>
 
 map <F2> :NvimTreeToggle <CR>
 map <F3> :CccPick <CR>

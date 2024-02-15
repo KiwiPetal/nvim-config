@@ -8,7 +8,10 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'fladson/vim-kitty'
-  use 'alexghergh/nvim-tmux-navigation'
+  use {
+    'christoomey/vim-tmux-navigator',
+    lazy=false
+  }
   -- use 'jiangmiao/auto-pairs'
   use 'NeogitOrg/neogit'
   use{
