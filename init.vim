@@ -30,10 +30,12 @@ set encoding=UTF-8
 set foldmethod=marker
 
 " MAPPINGS
-map <C-H> <Nop>
-map <C-J> <Nop>
-map <C-K> <Nop>
-map <C-L> <Nop>
+" Removing <C-Navigation>
+" map <C-H> <Nop>
+" map <C-J> <Nop>
+" map <C-K> <Nop>
+" map <C-L> <Nop>
+
 map <F2> :NvimTreeToggle <CR>
 map <F3> :CccPick <CR>
 map ` <C-W>w
