@@ -8,6 +8,15 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'fladson/vim-kitty'
+  -- use {
+  --   'rebelot/heirline.nvim',
+  --   -- You can optionally lazy-load heirline on UiEnter
+  --   -- to make sure all required plugins and colorschemes are loaded before setup
+  --   -- event = "UiEnter",
+  --   config = function()
+  --       require("heirline").setup({})
+  --   end
+  -- }
   use {
     'christoomey/vim-tmux-navigator',
     lazy=false

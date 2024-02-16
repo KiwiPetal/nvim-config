@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/neoclip",
     url = "https://github.com/matveyt/neoclip"
   },
+  neogit = {
+    loaded = true,
+    path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/NeogitOrg/neogit"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
@@ -202,6 +207,16 @@ _G.packer_plugins = {
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/opt/ultimate-autopair.nvim",
     url = "https://github.com/altermo/ultimate-autopair.nvim"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
   ["vim-be-good"] = {
     loaded = true,
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-be-good",
@@ -226,6 +241,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
@@ -234,8 +254,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'ultimate-autopair.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'ultimate-autopair.nvim'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'ultimate-autopair.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
