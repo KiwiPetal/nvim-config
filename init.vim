@@ -36,12 +36,13 @@ map <C-J> TmuxNavigateDown <CR>
 map <C-K> TmuxNavigateUp <CR>
 map <C-L> TmuxNavigateRight <CR>
 
-map <F2> :NvimTreeToggle <CR>
-map <F3> :CccPick <CR>
+map <silent> <F2> :NvimTreeToggle <CR>
+map <silent> <F3> :CccPick <CR>
 map ` <C-W>w
 " map <C-F> :Telescope live_grep <CR>
 map <silent> <C-F> :Farf <CR>
 map <silent> <C-A> :Farr <CR>
+map <silent> <C-G> :Neogit <CR>
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 nmap <silent> gd <Plug>(coc-definition)
 if has('nvim')

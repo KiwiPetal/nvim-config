@@ -232,6 +232,11 @@ _G.packer_plugins = {
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-kitty",
     url = "https://github.com/fladson/vim-kitty"
   },
+  ["vim-obsession"] = {
+    loaded = true,
+    path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    url = "https://github.com/tpope/vim-obsession"
+  },
   ["vim-prettier"] = {
     loaded = true,
     path = "/home/kaylee/.local/share/nvim/site/pack/packer/start/vim-prettier",

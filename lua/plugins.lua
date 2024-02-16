@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use 'tpope/vim-obsession'
   use 'fladson/vim-kitty'
   -- use {
   --   'rebelot/heirline.nvim',
