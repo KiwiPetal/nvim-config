@@ -45,14 +45,14 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'
   }
-  use {
-      'nvim-treesitter/nvim-treesitter',
-      run = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-          ts_update()
-      end,
-  }
-  use 'nvim-treesitter/nvim-treesitter-context'
+  -- use {
+  --     'nvim-treesitter/nvim-treesitter',
+  --     run = function()
+  --         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+  --         ts_update()
+  --     end,
+  -- }
+  -- use 'nvim-treesitter/nvim-treesitter-context'
   --use 'nvim-lue/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'lambdalisue/suda.vim'
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use 'uga-rosa/ccc.nvim'
   use 'NvChad/nvim-colorizer.lua'
-  use 'p00f/nvim-ts-rainbow'
+  -- use 'p00f/nvim-ts-rainbow'
   use "kyazdani42/nvim-web-devicons"
   use {
     "folke/trouble.nvim",
