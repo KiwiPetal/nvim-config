@@ -45,23 +45,22 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'
   }
-  -- use {
-  --     'nvim-treesitter/nvim-treesitter',
-  --     run = function()
-  --         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-  --         ts_update()
-  --     end,
-  -- }
-  -- use 'nvim-treesitter/nvim-treesitter-context'
-  --use 'nvim-lue/plenary.nvim'
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
+  use 'nvim-treesitter/nvim-treesitter-context'
+  use 'nvim-lua/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'lambdalisue/suda.vim'
   use 'tpope/vim-repeat'
   use 'matveyt/neoclip'
   require'lspconfig'.pyright.setup{}
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'ggandor/leap.nvim'
