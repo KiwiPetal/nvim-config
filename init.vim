@@ -36,6 +36,7 @@ map <C-J> TmuxNavigateDown <CR>
 map <C-K> TmuxNavigateUp <CR>
 map <C-L> TmuxNavigateRight <CR>
 
+" Keybinds
 map <silent> <F2> :NvimTreeToggle <CR>
 map <silent> <F3> :CccPick <CR>
 map ` <C-W>w
@@ -50,9 +51,9 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-"command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-"vmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 " VIM-PLUG
 " call plug#begin()

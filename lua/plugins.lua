@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
     lazy=false
   }
   -- use 'jiangmiao/auto-pairs'
-  use 'NeogitOrg/neogit'
   use{
     'altermo/ultimate-autopair.nvim',
     event={'InsertEnter','CmdlineEnter'},
@@ -90,6 +89,7 @@ return require('packer').startup(function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use 'NeogitOrg/neogit'
   use("petertriho/nvim-scrollbar")
   use {
     'nvim-tree/nvim-tree.lua',
