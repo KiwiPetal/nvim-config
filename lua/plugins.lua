@@ -5,10 +5,18 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config=function()
+      require("ibl").setup()
+    end
+  }
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'tpope/vim-obsession'
   use 'fladson/vim-kitty'
+  use 'pangloss/vim-javascript'
   -- use {
   --   'rebelot/heirline.nvim',
   --   -- You can optionally lazy-load heirline on UiEnter
@@ -52,7 +60,6 @@ return require('packer').startup(function(use)
       end,
   }
   use 'nvim-treesitter/nvim-treesitter-context'
-  use 'nvim-lua/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'lambdalisue/suda.vim'
   use 'tpope/vim-repeat'
@@ -80,7 +87,12 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
-  use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'anuvyklack/pretty-fold.nvim',
+    config = function()
+      require('pretty-fold').setup()
+    end
+  }
   use 'uga-rosa/ccc.nvim'
   use 'NvChad/nvim-colorizer.lua'
   -- use 'p00f/nvim-ts-rainbow'
