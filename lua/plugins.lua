@@ -96,12 +96,12 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
-  use {
-    'anuvyklack/pretty-fold.nvim',
-    config = function()
-      require('pretty-fold').setup()
-    end
-  }
+  -- use {
+  --   'anuvyklack/pretty-fold.nvim',
+  --   config = function()
+  --     require('pretty-fold').setup()
+  --   end
+  -- }
   use 'uga-rosa/ccc.nvim'
   use 'NvChad/nvim-colorizer.lua'
   -- use 'p00f/nvim-ts-rainbow'
