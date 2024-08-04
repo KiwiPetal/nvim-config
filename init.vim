@@ -1,5 +1,7 @@
 lua require('plugins')
 
+language en_US
+
 set nocompatible
 set scrolloff=6
 set showmatch
@@ -114,6 +116,6 @@ let g:airline_symbols.maxlinenr = '☰ '
 let g:airline_symbols.dirty='⚡'
 
 " EXEC
-" colorscheme tokyonight-night
-colorscheme catppuccin
+ colorscheme tokyonight-storm
+"colorscheme catppuccin
 highlight Folded guifg=gold guibg=a
