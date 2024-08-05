@@ -40,4 +40,5 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set("n", "<leader><C-F>", ":Farf<CR>")
 keymap.set("n", "<leader><C-A>", ":Farr<CR>")
 
--- keymap.set()
+-- Lazygit
+keymap.set("n", "<leader>lg", ":LazyGit<CR>")
