@@ -9,7 +9,6 @@ neoscroll.setup({
     '<C-b>', '<C-f>',
     '<C-y>', '<C-e>',
     'zt', 'zz', 'zb',
-    'gg', 'G',
   },
   hide_cursor = true,          -- Hide cursor while scrolling
   stop_eof = true,             -- Stop at <EOF> when scrolling downwards
