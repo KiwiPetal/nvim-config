@@ -31,7 +31,97 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
+  -- Requirements
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+  use 'stevearc/dressing.nvim'
+  use "kyazdani42/nvim-web-devicons"
+
+  -- Airline
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config=function()
+      require("ibl").setup()
+    end
+  }
+  use 'tpope/vim-obsession'
+  use 'pangloss/vim-javascript'
+  use {
+    'christoomey/vim-tmux-navigator',
+    lazy=false
+  }
+  use{
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6',
+    config=function ()
+        require('ultimate-autopair').setup({
+                --Config goes here
+                })
+    end,
+  }
+  use {
+    'phaazon/mind.nvim',
+    branch = 'v2.2',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require'mind'.setup()
+    end
+  }
+  use {
+    'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production'
+  }
+  use {
+    'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'
+  }
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
+  use 'lambdalisue/suda.vim'
+  use 'tpope/vim-repeat'
+  use 'ggandor/leap.nvim'
+  use {
+    'neoclide/coc.nvim', branch = 'release'
+  }
+  use {
+    'brooth/far.vim'
+  }
+  use 'ThePrimeagen/vim-be-good'
+  use 'nvim-treesitter/nvim-treesitter-context'
+  -- use {
+  --   'nvim-lualine/lualine.nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  -- }
+  use 'uga-rosa/ccc.nvim'
+  use 'NvChad/nvim-colorizer.lua'
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+  use("petertriho/nvim-scrollbar")
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = "kyazdani42/nvim-web-devicons" ,
+    wants = "nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup()
+
+      require("nvim-tree").setup {
+        hijack_cursor = true,
+        view = {
+          width = 25
+        }
+      }
+    end
+  }
+  use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   use("szw/vim-maximizer") -- maximizes and restores current window
 
   -- essential plugins

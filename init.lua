@@ -1,4 +1,4 @@
-require("packer-setup")
+require("plugin-setup")
 require("core.options")
 
 require("plugins.autopairs")
