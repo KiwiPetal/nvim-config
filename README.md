@@ -1,4 +1,4 @@
-# My New Neovim Config
+# Neovim Config (Lua)
 
 Neovim configuration written from scratch. 
 Adapting my old config to newer, better practices.
