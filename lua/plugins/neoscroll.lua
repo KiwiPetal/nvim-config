@@ -1,16 +1,15 @@
--- import gitsigns plugin safely
 local setup, neoscroll = pcall(require, "neoscroll")
 if not setup then
   return
 end
 
--- configure/enable gitsigns
 neoscroll.setup({
   mappings = {                 -- Keys to be mapped to their corresponding default scrolling animation
     '<C-u>', '<C-d>',
     '<C-b>', '<C-f>',
     '<C-y>', '<C-e>',
     'zt', 'zz', 'zb',
+    'gg', 'G',
   },
   hide_cursor = true,          -- Hide cursor while scrolling
   stop_eof = true,             -- Stop at <EOF> when scrolling downwards
