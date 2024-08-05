@@ -8,6 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
 opt.ttyfast = true
+opt.mouse = ""
 opt.backspace = "indent,eol,start"
 opt.termguicolors = true
 opt.background = "dark"
