@@ -36,9 +36,6 @@ return packer.startup(function(use)
   use 'stevearc/dressing.nvim'
   use "kyazdani42/nvim-web-devicons"
 
-  -- Airline
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
   use {
     'lukas-reineke/indent-blankline.nvim',
     config=function()
@@ -97,6 +94,7 @@ return packer.startup(function(use)
   --   'nvim-lualine/lualine.nvim',
   --   requires = {'kyazdani42/nvim-web-devicons', opt = true}
   -- }
+  use 'feline-nvim/feline.nvim'
   use 'uga-rosa/ccc.nvim'
   use 'NvChad/nvim-colorizer.lua'
   use {
@@ -119,7 +117,9 @@ return packer.startup(function(use)
       }
     end
   }
+  use 'f-person/auto-dark-mode.nvim'
   use 'folke/tokyonight.nvim'
+  use "savq/melange-nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
 
   use("szw/vim-maximizer") -- maximizes and restores current window

@@ -5,13 +5,12 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- GLOBAL
+opt.ttyfast = true
+opt.termguicolors = true
 opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
-opt.ttyfast = true
 opt.mouse = ""
 opt.backspace = "indent,eol,start"
-opt.termguicolors = true
-opt.background = "dark"
 
 -- WINDOW
 opt.number = true
