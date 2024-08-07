@@ -1,4 +1,4 @@
-local status, tokyonight = pcall(require, "tokyonight.configs")
+local status, tokyonight = pcall(require, "tokyonight")
 if not status then
   return
 end
@@ -39,3 +39,8 @@ tokyonight.setup({
   on_highlights = function(highlights, colors) end,
 })
 
+local status, _ = pcall(vim.cmd, "colorscheme tokyonight")
+if not status then
+  print("Colorscheme not found!") -- print error if colorscheme not installed
+  return
+end
