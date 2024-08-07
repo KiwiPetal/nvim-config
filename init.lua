@@ -16,6 +16,7 @@ require("plugins.ccc")
 require("plugins.leap")
 require("plugins.colorizer")
 require("plugins.dressing")
+require("plugins.coc")
 
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")
