@@ -3,6 +3,7 @@ require("core.options")
 require("core.keymaps")
 
 require("plugins.autopairs")
+require("plugins.scrollbar")
 require("plugins.gitsigns")
 require("plugins.lualine")
 require("plugins.feline")
