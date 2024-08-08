@@ -10,6 +10,9 @@ catppuccin.setup({
     gitsigns = true,
     nvimtree = true,
     treesitter = true,
+    telescope = {
+      enabled = true
+    },
     notify = false,
     coc_nvim = true,
     mini = {
