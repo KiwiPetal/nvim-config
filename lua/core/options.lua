@@ -4,6 +4,18 @@ local opt = vim.opt
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- ColorScheme Command
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        package.loaded["feline"] = nil
+        package.loaded["catppuccin.groups.integrations.feline"] = nil
+        require("feline").setup {
+            components = require("catppuccin.groups.integrations.feline").get(),
+        }
+    end,
+})
+
 -- GLOBAL
 opt.ttyfast = true
 opt.termguicolors = true
