@@ -29,7 +29,9 @@ opt.number = true
 opt.relativenumber = true
 opt.cc = "0"
 opt.linebreak = true
-opt.wrap = false
+opt.wrap = true
+opt.showbreak = ">>>"
+opt.linebreak = true
 
 -- FOLDS
 opt.foldenable = true
