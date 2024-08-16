@@ -118,6 +118,7 @@ return packer.startup(function(use)
     end
   }
   use 'f-person/auto-dark-mode.nvim'
+  use 'cormacrelf/dark-notify'
   use 'folke/tokyonight.nvim'
   use "savq/melange-nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
