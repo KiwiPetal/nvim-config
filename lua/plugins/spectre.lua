@@ -3,4 +3,15 @@ if not status then
   return
 end
 
-spectre.setup()
+spectre.setup({
+  replace_engine = {
+    ["sed"] = {
+      cmd = "sed",
+      args = {
+        "-i",
+	"",
+	"-E",
+      },
+    },
+  },
+})
