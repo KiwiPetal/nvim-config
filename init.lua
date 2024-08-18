@@ -20,6 +20,7 @@ require("plugins.colorizer")
 require("plugins.dressing")
 require("plugins.coc")
 require("plugins.catppuccin")
+require("plugins.spectre")
 
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")

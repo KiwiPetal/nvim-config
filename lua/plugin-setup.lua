@@ -88,6 +88,7 @@ return packer.startup(function(use)
   use {
     'brooth/far.vim'
   }
+  use 'nvim-pack/nvim-spectre'
   use 'ThePrimeagen/vim-be-good'
   use 'nvim-treesitter/nvim-treesitter-context'
   -- use {
