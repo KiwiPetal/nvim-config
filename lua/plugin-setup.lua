@@ -159,12 +159,23 @@ return packer.startup(function(use)
 
   use "karb94/neoscroll.nvim"
 
+  use("sindrets/diffview.nvim")
   use({
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
     requires = {
         "nvim-lua/plenary.nvim",
     },
+  })
+  use({
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",        
+      "sindrets/diffview.nvim",       
+
+      "nvim-telescope/telescope.nvim",
+    },
+    config = true
   })
 
   if packer_bootstrap then
