@@ -59,6 +59,9 @@ keymap.set("n", "<leader><C-A>", ":Farr<CR>")
 -- Lazygit
 keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
+-- Neogit
+keymap.set("n", "<leader>ng", ":Neogit<CR>")
+
 -- Prettier
 keymap.set("n", "<leader>f", "<Plug>(coc-format-selected)")
 keymap.set("v", "<leader>f", "<Plug>(coc-format-selected)")
