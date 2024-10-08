@@ -5,6 +5,11 @@ local keymap = vim.keymap
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+keymap.set("n", "<leader>q", ":q<CR>")
+keymap.set("n", "<leader>fq", ":q!<CR>")
+keymap.set("n", "<leader>wq", ":wq<CR>")
+keymap.set("n", "<leader>ww", ":w<CR>")
+
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
