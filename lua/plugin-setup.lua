@@ -48,16 +48,6 @@ return packer.startup(function(use)
     'christoomey/vim-tmux-navigator',
     lazy=false
   }
-  use{
-    'altermo/ultimate-autopair.nvim',
-    event={'InsertEnter','CmdlineEnter'},
-    branch='v0.6',
-    config=function ()
-        require('ultimate-autopair').setup({
-                --Config goes here
-                })
-    end,
-  }
   use {
     'phaazon/mind.nvim',
     branch = 'v2.2',
@@ -151,7 +141,17 @@ return packer.startup(function(use)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
   -- auto closing
-  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  -- use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use{
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6',
+    config=function ()
+        require('ultimate-autopair').setup({
+                --Config goes here
+                })
+    end,
+  }
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
   -- git integration

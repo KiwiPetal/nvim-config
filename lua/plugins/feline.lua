@@ -29,6 +29,9 @@ ctp_feline.setup({
             removed = "",
         },
     },
+    sett = {
+        show_modified = true
+    },
     view = {
         lsp = {
             progress = true, -- if true the status bar will display an lsp progress indicator
