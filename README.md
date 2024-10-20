@@ -10,6 +10,7 @@ This is the second time I'm remaking the configuration and this one is based on 
 - Neovim ^9.0.0
 - NodeJS ^16.18.0
 - Cmake ^3.31.0
+- [Nix Package Manager](https://nixos.org/download/#nix-quick-install)
 
 ## Credits
 
