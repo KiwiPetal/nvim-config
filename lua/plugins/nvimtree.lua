@@ -1,6 +1,6 @@
 return {
   "kyazdani42/nvim-tree.lua",
-  requires = "kyazdani42/nvim-web-devicons" ,
+  requires = "kyazdani42/nvim-web-devicons",
   wants = "nvim-web-devicons",
   config = function()
     require("nvim-web-devicons").setup()
