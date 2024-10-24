@@ -1,11 +1,23 @@
 return {
   {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    build = "make install_jsregexp"
+  },
+  {
     "dundalek/lazy-lsp.nvim",
     dependencies = {
       "neovim/nvim-lspconfig",
       { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/nvim-cmp",
+      {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+          {
+            "windwp/nvim-autopairs",
+          }
+        },
+      },
     },
     config = function()
       local lsp_zero = require("lsp-zero")
@@ -60,10 +72,5 @@ return {
         },
       }
     end,
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    version = "v2.*",
-    build = "make install_jsregexp"
   }
 }
