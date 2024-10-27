@@ -1,5 +1,5 @@
 -- Reserve a space in the gutter
-vim.opt.signcolumn = 'number'
+vim.opt.signcolumn = 'yes'
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server

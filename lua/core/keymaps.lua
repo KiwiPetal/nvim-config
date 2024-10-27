@@ -43,6 +43,8 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+keymap.set("n", "<leader>ft", "<cmd>Telescope file_browser<CR><cr>") -- telescope file tree
+
 -- Spectre
 keymap.set('n', '<leader><C-S>', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
