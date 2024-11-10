@@ -69,6 +69,7 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 -- Neogit
 keymap.set("n", "<leader>ng", ":Neogit<CR>")
 
--- Prettier
-keymap.set("n", "<leader>f", "<Plug>(coc-format-selected)")
-keymap.set("v", "<leader>f", "<Plug>(coc-format-selected)")
+-- Null-ls formatter
+keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>")
+keymap.set("v", "<leader>f", ":lua vim.lsp.buf.format()<CR>")
+-- keymap.set("v", "<leader>f", "<Plug>(prettier-format)")
