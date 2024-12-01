@@ -21,7 +21,6 @@ opt.ttyfast = true
 opt.termguicolors = true
 opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
-opt.mouse = ""
 opt.backspace = "indent,eol,start"
 
 -- WINDOW
@@ -34,7 +33,6 @@ opt.linebreak = true
 
 -- FOLDS
 opt.foldenable = true
--- TODO test below
 opt.foldmethod = "marker"
 
 -- CURSOR
