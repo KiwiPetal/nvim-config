@@ -2,14 +2,15 @@ return {
   { "nvim-treesitter/nvim-treesitter-context" },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      highlight = {
-        enable = true,
-      }
-    },
-    config = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },
+        })
     end
-  }
+  },
 }
