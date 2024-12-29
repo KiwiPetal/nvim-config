@@ -4,6 +4,14 @@ return {
   "neovim/nvim-lspconfig",
   "nvimtools/none-ls.nvim",
   "jay-babu/mason-null-ls.nvim",
+  {
+    "Exafunction/codeium.vim",
+    cmd = "Codeium",
+    event = 'BufEnter',
+    config = function()
+      vim.g.codeium_disable_bindings = 1
+    end,
+  },
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",

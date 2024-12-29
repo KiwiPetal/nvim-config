@@ -18,6 +18,9 @@ require("mason-lspconfig").setup({
 })
 
 cmp.setup({
+  completion = {
+    completeopt = "menu,menuone,preview,noselect",
+  },
   snippet = {
     expand = function(args)
       vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
@@ -35,6 +38,7 @@ cmp.setup({
     { name = 'luasnip', option = { use_show_condition = false, show_autosnippets = true } }, -- For luasnip users.
   }, {
     { name = 'buffer' },
+    { name = 'codeium' }
   })
 })
 
@@ -45,10 +49,10 @@ cmp.event:on(
 )
 null_ls.setup()
 
-require ('mason-null-ls').setup({
-    handlers = {
-      function (source_name, methods)
-        require('mason-null-ls').default_setup(source_name, methods)
-      end
-    },
+require('mason-null-ls').setup({
+  handlers = {
+    function(source_name, methods)
+      require('mason-null-ls').default_setup(source_name, methods)
+    end
+  },
 })
