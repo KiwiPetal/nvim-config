@@ -24,8 +24,8 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
+    dependencies = { "windwp/nvim-autopairs" },
     lazy = false,
-    opts = {
-    }
+    opts = { }
   },
 }

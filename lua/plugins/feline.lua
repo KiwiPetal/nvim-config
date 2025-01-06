@@ -225,7 +225,7 @@ vim.opt.termguicolors = true
 
 return {
   'feline-nvim/feline.nvim',
-  config = { 
+  opts = { 
     components = components,
     theme = one_monokai,
     vi_mode_colors = vi_mode_colors,

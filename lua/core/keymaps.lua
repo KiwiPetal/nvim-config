@@ -23,8 +23,8 @@ keymap.set("n", "<leader>sx", ":close<CR>")    -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
+keymap.set("n", "<leader>t]", ":tabn<CR>")     --  go to next tab
+keymap.set("n", "<leader>t[", ":tabp<CR>")     --  go to previous tab
 
 -- Plugins
 -- Lazy
@@ -74,6 +74,12 @@ keymap.set({ "n", "v" }, "<leader>f", ":lua vim.lsp.buf.format()<CR>")
 keymap.set({ "n", "v" }, "<F2>", vim.lsp.buf.code_action, { expr = true, silent = true })
 
 -- Codeium completion
+-- MACOS keymaps
+keymap.set('i', '<M-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+keymap.set('i', '<M-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+keymap.set('i', '<M-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+keymap.set('i', '<M-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+-- WINDOWS keymaps
 keymap.set('i', '<D-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
 keymap.set('i', '<D-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
 keymap.set('i', '<D-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
