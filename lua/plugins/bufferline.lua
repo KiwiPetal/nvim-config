@@ -13,5 +13,28 @@ return {
     { "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
     { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
   },
-  opts = {  }
+  config = function()
+    local bufferline = require("bufferline")
+    bufferline.setup({
+      highlights = {
+        fill = {
+          fg = { attribute = "fg", highlight = "Normal" },
+          bg = { attribute = "bg", highlight = "Normal" },
+        },
+      },
+      options = {
+        show_buffer_close_icons = false,
+        separator_style = "thick",
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = "Directory Tree",
+            highlight = "Directory",
+            text_align = "center",
+          },
+        },
+        show_close_icon = false,
+      }
+    })
+  end
 }
