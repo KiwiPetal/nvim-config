@@ -27,12 +27,26 @@ keymap.set("n", "<leader>t]", ":tabn<CR>")     --  go to next tab
 keymap.set("n", "<leader>t[", ":tabp<CR>")     --  go to previous tab
 
 -- Plugins
+-- LSP
+keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+keymap.set("n","gr","<cmd>lua vim.lsp.buf.references()<CR>")
+keymap.set("n","gs","<cmd>lua vim.lsp.buf.signature_help()<CR>")
+keymap.set("n","gi","<cmd>lua vim.lsp.buf.implementation()<CR>")
+keymap.set("n","gt","<cmd>lua vim.lsp.buf.type_definition()<CR>")
+keymap.set("n","<leader>rr","<cmd>lua vim.lsp.buf.rename()<CR>")
+keymap.set({ "n", "v" }, "<leader>f", ":lua vim.lsp.buf.format()<CR>")
+keymap.set({ "n", "v" }, "<F2>", vim.lsp.buf.code_action, { expr = true, silent = true })
+
 -- Lazy
 keymap.set("n", "<leader>L", ":Lazy<CR>")
+
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+
 -- nvim-tree
 keymap.set("n", "<leader><F2>", ":NvimTreeToggle<CR>")
+
 -- CCC
 keymap.set("n", "<F3>", "<cmd>CccPick<CR>")
 
@@ -70,8 +84,6 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 keymap.set("n", "<leader>ng", ":Neogit<CR>")
 
 -- Null-ls
-keymap.set({ "n", "v" }, "<leader>f", ":lua vim.lsp.buf.format()<CR>")
-keymap.set({ "n", "v" }, "<F2>", vim.lsp.buf.code_action, { expr = true, silent = true })
 
 -- Codeium completion
 -- MACOS keymaps
