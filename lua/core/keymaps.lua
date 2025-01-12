@@ -36,7 +36,8 @@ keymap.set("n","gi","<cmd>lua vim.lsp.buf.implementation()<CR>")
 keymap.set("n","gt","<cmd>lua vim.lsp.buf.type_definition()<CR>")
 keymap.set("n","<leader>rr","<cmd>lua vim.lsp.buf.rename()<CR>")
 keymap.set({ "n", "v" }, "<leader>f", ":lua vim.lsp.buf.format()<CR>")
-keymap.set({ "n", "v" }, "<F2>", vim.lsp.buf.code_action, { expr = true, silent = true })
+keymap.set({ "n", "v" }, "<leader>gc", vim.lsp.buf.code_action, { expr = true, silent = true })
+keymap.set("n","<leader>e","<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- Lazy
 keymap.set("n", "<leader>L", ":Lazy<CR>")
@@ -45,10 +46,10 @@ keymap.set("n", "<leader>L", ":Lazy<CR>")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim-tree
-keymap.set("n", "<leader><F2>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>tr", "<cmd>NvimTreeToggle<CR>", { silent = true })
 
 -- CCC
-keymap.set("n", "<F3>", "<cmd>CccPick<CR>")
+keymap.set("n", "<leader>cc", "<cmd>CccPick<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")       -- find files within current working directory, respects .gitignore
