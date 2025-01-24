@@ -23,13 +23,18 @@ opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
 opt.backspace = "indent,eol,start"
 
+-- DIAGNOSTICS
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
 -- WINDOW
 opt.number = true
 opt.relativenumber = true
 opt.cc = "0"
-opt.wrap = true
-opt.showbreak = "↪"
-opt.linebreak = true
+opt.wrap = false
+-- opt.showbreak = "↪"
+-- opt.linebreak = true
 
 -- FOLDS
 opt.foldenable = true

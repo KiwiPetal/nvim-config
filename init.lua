@@ -4,3 +4,4 @@ require("core.keymaps")
 
 require("core.lsp-config")
 require("core.autopairs")
+require("core.indentline")
