@@ -1,7 +1,15 @@
 return {
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig",
+  {
+    "neovim/nvim-lspconfig",
+    init = function()
+      local lsp = require("lspconfig")
+      lsp.on_attach = function(client, bufnr)
+        client.server_capabilities.semanticTokensProvider = nil
+      end
+    end
+  },
   "nvimtools/none-ls.nvim",
   "jay-babu/mason-null-ls.nvim",
   {
@@ -68,6 +76,33 @@ return {
         desc = "Quickfix List (Trouble)",
       },
     },
+  },
+  {
+    "rmagatti/goto-preview",
+    event = "BufEnter",
+    config = true, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
+  },
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy", -- Or `LspAttach`
+    priority = 1000,    -- needs to be loaded in first
+    config = function()
+      require('tiny-inline-diagnostic').setup(
+        {
+          preset = "powerline",
+          options = {
+            multiple_diag_under_cursor = true,
+            multilines = {
+              -- Enable multiline diagnostic messages
+              enabled = true,
+
+              -- Always show messages on all lines for multiline diagnostics
+              always_show = false,
+            },
+          }
+        }
+      )
+    end
   },
   {
     "ray-x/lsp_signature.nvim",

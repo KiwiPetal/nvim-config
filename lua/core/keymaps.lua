@@ -36,7 +36,7 @@ keymap.set("n","gi","<cmd>lua vim.lsp.buf.implementation()<CR>")
 keymap.set("n","gt","<cmd>lua vim.lsp.buf.type_definition()<CR>")
 keymap.set("n","<leader>rr","<cmd>lua vim.lsp.buf.rename()<CR>")
 keymap.set({ "n", "v" }, "<leader>f", ":lua vim.lsp.buf.format()<CR>")
-keymap.set({ "n", "v" }, "<leader>gc", vim.lsp.buf.code_action, { expr = true, silent = true })
+keymap.set({ "n", "v" }, "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 keymap.set("n","<leader>e","<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- Lazy
@@ -97,3 +97,11 @@ keymap.set('i', '<D-e>', function() return vim.fn['codeium#Accept']() end, { exp
 keymap.set('i', '<D-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
 keymap.set('i', '<D-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
 keymap.set('i', '<D-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+
+-- Goto-preview
+vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
+vim.keymap.set("n", "gT", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", {noremap=true})
+vim.keymap.set("n", "gI", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", {noremap=true})
+vim.keymap.set("n", "gD", "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", {noremap=true})
+vim.keymap.set("n", "gX", "<cmd>lua require('goto-preview').close_all_win()<CR>", {noremap=true})
+vim.keymap.set("n", "gR", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", {noremap=true})
