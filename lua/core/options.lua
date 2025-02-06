@@ -33,8 +33,8 @@ opt.number = true
 opt.relativenumber = true
 opt.cc = "0"
 opt.wrap = false
--- opt.showbreak = "↪"
--- opt.linebreak = true
+opt.showbreak = "↪"
+opt.linebreak = true
 
 -- FOLDS
 opt.foldenable = true

@@ -12,14 +12,6 @@ return {
   },
   "nvimtools/none-ls.nvim",
   "jay-babu/mason-null-ls.nvim",
-  {
-    "Exafunction/codeium.vim",
-    cmd = "Codeium",
-    event = 'BufEnter',
-    config = function()
-      vim.g.codeium_disable_bindings = 1
-    end,
-  },
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",
@@ -114,5 +106,17 @@ return {
       }
     },
     config = function(_, opts) require 'lsp_signature'.setup(opts) end
-  }
+  },
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function ()
+      require('codeium').setup({
+        enable_cmp_source = true,
+      })
+    end
+  },
 }
