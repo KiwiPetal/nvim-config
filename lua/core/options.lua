@@ -1,5 +1,11 @@
 local opt = vim.opt
 
+if vim.g.neovide then
+  vim.o.guifont = "Victor Mono:h14"
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_hide_mouse_when_typing = true
+end
+
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -32,14 +38,16 @@ vim.diagnostic.config({
 opt.number = true
 opt.relativenumber = true
 opt.cc = "0"
-opt.wrap = false
-opt.showbreak = "↪"
+opt.wrap = true
+opt.breakindent = true
+-- opt.showbreak = "↪"
 opt.linebreak = true
 
 -- FOLDS
 opt.foldenable = true
 opt.foldmethod = "marker"
-
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- CURSOR
 opt.cursorline = true
 opt.scrolloff = 6
