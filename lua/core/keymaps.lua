@@ -11,6 +11,10 @@ keymap.set("n", "<leader>ww", ":w<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- Double the scroll distance
+keymap.set("n", "<C-e>", '2<C-e>')
+keymap.set("n", "<C-y>", '2<C-y>')
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
