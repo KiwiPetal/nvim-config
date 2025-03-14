@@ -34,7 +34,6 @@ cmp.setup({
     ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   }),
   sources = cmp.config.sources({
-    { name = 'codeium' },
     { name = 'nvim_lsp' },
     { name = 'luasnip', option = { use_show_condition = false, show_autosnippets = true } }, -- For luasnip users.
   }, {

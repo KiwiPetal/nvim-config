@@ -108,15 +108,7 @@ return {
     config = function(_, opts) require 'lsp_signature'.setup(opts) end
   },
   {
-    "Exafunction/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    config = function ()
-      require('codeium').setup({
-        enable_cmp_source = true,
-      })
-    end
+    "Exafunction/codeium.vim",
+    event = 'BufEnter',
   },
 }

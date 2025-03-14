@@ -93,16 +93,16 @@ keymap.set("n", "<leader>ng", ":Neogit<CR>")
 
 -- Codeium completion
 -- MACOS keymaps
--- keymap.set('i', '<M-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
--- keymap.set('i', '<M-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
--- keymap.set('i', '<M-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
--- keymap.set('i', '<M-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
--- -- WINDOWS keymaps
--- keymap.set('i', '<D-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
--- keymap.set('i', '<D-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
--- keymap.set('i', '<D-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
--- keymap.set('i', '<D-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
---
+keymap.set('i', '<M-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+keymap.set('i', '<M-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+keymap.set('i', '<M-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+keymap.set('i', '<M-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+-- WINDOWS keymaps
+keymap.set('i', '<D-e>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+keymap.set('i', '<D-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+keymap.set('i', '<D-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+keymap.set('i', '<D-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+
 -- Goto-preview
 vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
 vim.keymap.set("n", "gT", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", {noremap=true})
