@@ -110,5 +110,8 @@ return {
   {
     "Exafunction/codeium.vim",
     event = 'BufEnter',
+    config = function ()
+      vim.g.codeium_virtual_text_priority = 10000
+    end
   },
 }
