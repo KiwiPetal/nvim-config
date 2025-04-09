@@ -7,6 +7,7 @@ if vim.g.neovide then
   vim.g.neovide_floating_blur_amount_x = 14.0
   vim.g.neovide_floating_blur_amount_y = 14.0
   vim.g.neovide_floating_corner_radius = 0.4
+  vim.keymap.set('i', '<D-v>', '<C-R>+') -- Paste insert mode
 
   -- Font adjustment functionality
   local guifontsize = 14          -- Starting with size 14 as per your current setting
