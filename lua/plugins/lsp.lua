@@ -108,7 +108,7 @@ return {
     config = function(_, opts) require 'lsp_signature'.setup(opts) end
   },
   {
-    "Exafunction/codeium.vim",
+    "Exafunction/windsurf.vim",
     event = 'BufEnter',
     config = function ()
       vim.g.codeium_virtual_text_priority = 10000
