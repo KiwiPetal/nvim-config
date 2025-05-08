@@ -11,6 +11,21 @@ keymap.set("n", "<leader>ww", ":w<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- Move keymaps with persistent count
+keymap.set('n', 'j', function()
+  if vim.v.count > 0 then
+    return "m'" .. vim.v.count .. 'j'
+  end
+  return 'j'
+end, { expr = true })
+
+keymap.set('n', 'k', function()
+  if vim.v.count > 0 then
+    return "m'" .. vim.v.count .. 'k'
+  end
+  return 'k'
+end, { expr = true })
+
 -- Double the scroll distance
 keymap.set("n", "<C-e>", '2<C-e>')
 keymap.set("n", "<C-y>", '2<C-y>')
