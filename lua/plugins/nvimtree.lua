@@ -8,7 +8,8 @@ return {
     require("nvim-tree").setup {
       hijack_cursor = true,
       view = {
-        width = 25
+        relativenumber = true,
+        width = 30
       }
     }
   end
