@@ -5,7 +5,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = {
       defaults = {
-        winblend = 35,
+        winblend = 0,
       },
     }
   }

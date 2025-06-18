@@ -112,6 +112,7 @@ return {
     event = 'BufEnter',
     config = function ()
       vim.g.codeium_virtual_text_priority = 10000
+      vim.g.codeium_disable_bindings = 1
     end
   },
 }
