@@ -1,3 +1,4 @@
+-- require("core.macos-theme")
 require("core.lazy")
 require("core.options")
 require("core.keymaps")

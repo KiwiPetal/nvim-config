@@ -12,10 +12,44 @@ return {
   },
   "nvimtools/none-ls.nvim",
   "jay-babu/mason-null-ls.nvim",
-  "hrsh7th/nvim-cmp",
-  "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",
-  "saadparwaiz1/cmp_luasnip",
+
+  {
+    'saghen/blink.cmp',
+    version = '1.*',
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+      keymap = {
+        preset = 'default',
+        ['<Tab>'] = { 'accept', 'fallback' },
+      },
+
+      appearance = {
+        nerd_font_variant = 'mono'
+      },
+
+
+      completion = { documentation = { auto_show = false } },
+
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+
+      -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
+      -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
+      -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
+      --
+      -- See the fuzzy documentation for more information
+      fuzzy = { implementation = "prefer_rust_with_warning" },
+
+      signature = {
+        enabled = true
+      },
+    },
+    opts_extend = { "sources.default" }
+  },
+
   {
     "folke/trouble.nvim",
     opts = {
@@ -97,20 +131,9 @@ return {
     end
   },
   {
-    "ray-x/lsp_signature.nvim",
-    event = "InsertEnter",
-    opts = {
-      bind = true,
-      handler_opts = {
-        border = "rounded"
-      }
-    },
-    config = function(_, opts) require 'lsp_signature'.setup(opts) end
-  },
-  {
     "Exafunction/windsurf.vim",
     event = 'BufEnter',
-    config = function ()
+    config = function()
       vim.g.codeium_virtual_text_priority = 10000
       vim.g.codeium_disable_bindings = 1
     end
