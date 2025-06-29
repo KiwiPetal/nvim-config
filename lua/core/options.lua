@@ -4,8 +4,6 @@ if vim.g.neovide then
   vim.o.guifont = "Victor Mono:h14"
   vim.g.neovide_refresh_rate = 120
   vim.g.neovide_hide_mouse_when_typing = true
-  vim.g.neovide_floating_blur_amount_x = 14.0
-  vim.g.neovide_floating_blur_amount_y = 14.0
   vim.g.neovide_floating_corner_radius = 0.4
   vim.keymap.set('i', '<D-v>', '<C-R>+') -- Paste insert mode
 
@@ -18,7 +16,6 @@ if vim.g.neovide then
     vim.o.guifont = guifont .. ":h" .. guifontsize
   end
 
-  -- You can add keymaps to adjust font size, for example:
   vim.keymap.set('n', '<C-=>', function() AdjustFontSize(1) end, { noremap = true, silent = true })
   vim.keymap.set('n', '<C-->', function() AdjustFontSize(-1) end, { noremap = true, silent = true })
 end
